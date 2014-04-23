@@ -1,9 +1,14 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-<form action="" method="post">
-	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-	<label>First name:&nbsp;&nbsp;&nbsp;</label><input type="text" name="first" placeholder="">
-	<label>Last name:&nbsp;&nbsp;&nbsp;</label><input type="text" name="last" placeholder="">
-	<label>Email:&nbsp;&nbsp;&nbsp;</label><input type="text" name="email" placeholder="Enter email address">
-	&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit a comment" />
-</form>
+<div class="container">
+	<h1>Users#new</h1>
+	<p>Find me in app/views/users/new.html.erb</p><hr />
+	<h2>New User Form</h2>
+	<form action="/create" method="post">
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		<label>First name:</label><input type="text" name="first" placeholder="">
+		<label>Last name:</label><input type="text" name="last" placeholder="">
+		<label>Email:</label><input type="text" name="email" placeholder="Enter email..">
+		<label>Password:</label><input type="text" name="password" placeholder="">
+		<input type="submit" value="Create" class="btn btn-info" />
+	</form>
+	<br /><a href="/users/index">Go Back</a>
+</div>

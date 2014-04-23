@@ -1,0 +1,11 @@
+<div class="container">
+<br />
+	<h1>User Info</h1><hr>
+	<div class="col-md-6">
+		<p><strong>First Name:</strong><pre><%= @user_show.first_name %></pre></p>
+		<p><strong>Last Name:</strong><pre><%= @user_show.last_name %></pre></p>
+		<p><strong>Email Name:</strong><pre><%= @user_show.email_address %></pre></p>
+		<br /><a href="/users/<%= @user_show.id %>/edit">Edit</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/users/index">Back</a>
+	</div>
+
+</div>

@@ -1,1 +1,16 @@
 @import "bootstrap";
+
+input {
+	display: block;
+	width: 215px;
+}
+label {
+	margin-top: 10px;
+}
+input[type="submit"] {
+	margin-top: 20px;
+	color: white;
+}
+table td a {
+	margin-left: 30px;
+}

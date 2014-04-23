@@ -1,30 +1,32 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-<div class="col-md-4">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="container">
+	<h1>Users#index</h1>
+	<p>Find me in app/views/users/index.html.erb</p><hr />
+	<h2>Current Members</h2><br />
 
+	<div class="col-md-8">
+		<table class="table table-bordered table-hover table-striped table-responsive">
+			<thead>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th></th>
+			</thead>
+			<tbody>
+				<% @user.each do | i | %>
+				<tr>
+					<td><%= i.first_name %></td>
+					<td><%= i.last_name %></td>
+					<td><%= i.email_address %></td>
+					<td><a href="/users/<%= i.id %>/show">Show</a><a href="/users/<%= i.id %>/edit">Edit</a><a href="/users/<%= i.id %>/delete"> Delete</a>
+					</td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-md-8">
+		<a href="/users/new">New User</a>
+	</div>
 </div>
 
-<div class="col-md-4">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
 
-<div class="col-md-4">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-<a href="/posts/index">2-columns @ 'views#posts'</a>

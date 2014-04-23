@@ -1,13 +1,22 @@
 TwoLayouts::Application.routes.draw do
-  get "posts/index"
-  get "posts/new"
+  root 'users#index'
+
   get "users/index"
   get "users/new"
+  post "/create" => "users#create"
+  get "/users/:id/show" => "users#show"
+  get "/users/:id/edit" => "users#edit"
+  post "/users/:id/update" => "users#update"
+  get "/users/:id/delete" => "users#destroy"
+  # post "/update" => "users#update"
+  # get "users/:id/edit"
+  # put "users/:id"
+  # delete "users/:id"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
